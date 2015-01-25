@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>${work_space}</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>${work_space}\Resources</Resources>
+  <Name>${project_name}</Name>
+  <JsonFileName>${project_name}.json</JsonFileName>
+  <JsonFolder>${work_space}\Json</JsonFolder>
+  <JsonList>
+    <string>${project_name}_1.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>${width}</Width>
+    <Height>${height}</Height>
+  </CanvasSize>
+  <filePath>${work_space}\${project_name}.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList />
+  <imagePngList />
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson />
+</UIProject>

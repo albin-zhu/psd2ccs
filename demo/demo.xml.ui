@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>C:\Users\albin\ps2ccs\demo</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>C:\Users\albin\ps2ccs\demo\Resources</Resources>
+  <Name>demo</Name>
+  <JsonFileName>demo.json</JsonFileName>
+  <JsonFolder>C:\Users\albin\ps2ccs\demo\Json</JsonFolder>
+  <JsonList>
+    <string>demo_1.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>1024</Width>
+    <Height>768</Height>
+  </CanvasSize>
+  <filePath>C:\Users\albin\ps2ccs\demo\demo.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList />
+  <imagePngList />
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson />
+</UIProject>
