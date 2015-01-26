@@ -66,18 +66,6 @@ class PSD2Cocos():
             for i in psd.layers[::-1]:
                 self.parsePsd(i, parent)
 
-def readFile(t):
-    f = open(t, 'r')
-    c = f.read()
-    f.close()
-    return c
-
-def writeFile(f, c):
-    d = open(f, 'w')
-    d.write(c)
-    d.close()
-
-
 if __name__ == '__main__':
     args = sys.argv[1:]
     projectName = args[0].split('.')[0]
