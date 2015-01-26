@@ -21,6 +21,5 @@ Step.
 Warning.
 
 1.  psd不能有中文
-2.  没考虑mac的文件路径,全部用的 '\\', cocostudio1.6没有mac版.如果有需要,以后再改
-3.  psd中不要用Group,因为还没加cclayer的映射,只有Sprite的映射
+2.  psd中不要用Group,因为还没加cclayer的映射,只有Sprite的映射
 
