@@ -25,7 +25,7 @@ class PSD2Cocos():
 
     def getString(self):
         engine = tenjin.Engine()
-        return  engine.render('json\\ui.json', {
+        return  engine.render('json/ui.json', {
             "height" : self.height, 
             "width" : self.width,
             "children" : self.children
@@ -54,7 +54,7 @@ class PSD2Cocos():
             else:
                 name = names[0]
             image = psd.as_PIL()
-            image.save(self.projectName + "\\Resources\\" + name+'.png')
+            image.save(self.projectName + "/Resources/" + name+'.png')
 
             self.addChild(parent, name, cc_type,  self.bbox2Pos(psd.bbox))
 
@@ -66,30 +66,31 @@ class PSD2Cocos():
             for i in psd.layers[::-1]:
                 self.parsePsd(i, parent)
 
+
 if __name__ == '__main__':
     args = sys.argv[1:]
     projectName = args[0].split('.')[0]
     psd = PSDImage.load(args[0])
     if(not os.path.isdir(projectName)):
         os.mkdir(projectName)
-    if(not os.path.isdir(projectName + "\\Resources")):
-        os.mkdir(projectName + "\\Resources")
-    if(not os.path.isdir(projectName + "\\Json")):
-        os.mkdir(projectName + "\\Json")
+    if(not os.path.isdir(projectName + "/Resources")):
+        os.mkdir(os.path.abspath(projectName + "/Resources"))
+    if(not os.path.isdir(projectName + "/Json")):
+        os.mkdir(os.path.abspath(projectName + "/Json"))
     tool = PSD2Cocos(psd, projectName, '-auto')
 
-    f = open(projectName + "\\Json\\" + projectName + "_1.json", 'w')
+    f = open(projectName + "/Json/" + projectName + "_1.json", 'w')
     f.write(tool.getString())
     f.close()
 
     engine = tenjin.Engine()
-    ui = engine.render('json\\project.xml', {
+    ui = engine.render('json/project.xml', {
         "height" : tool.height, 
         "width" : tool.width,
         "project_name" : projectName,
-        "work_space" : os.getcwd() + '\\' + projectName
+        "work_space" : os.path.abspath(os.getcwd() + '/' + projectName)
         })
 
-    f = open(projectName + "\\" + projectName + '.xml.ui', 'w')
+    f = open(projectName + "/" + projectName + '.xml.ui', 'w')
     f.write(ui)
     f.close()
